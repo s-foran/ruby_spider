@@ -5,8 +5,8 @@ require_relative "lib/ruby_spider/version"
 Gem::Specification.new do |spec|
   spec.name = "ruby_spider"
   spec.version = RubySpider::VERSION
-  spec.authors = ["Sam Foran"]
-  spec.email = ["samuel.dm.foran@gmail.com"]
+  spec.authors = [ "Sam Foran" ]
+  spec.email = [ "samuel.dm.foran@gmail.com" ]
 
   spec.summary = "RubySpider: A declarative DSL and toolkit for web scraping"
   spec.description = "RubySpider is a Ruby gem that allows developers to scrape any website using a declarative DSL, extract structured data, and save it in various formats."
@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   end
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = [ "lib" ]
 
   # Uncomment to register a new dependency of your gem
   # spec.add_dependency "example-gem", "~> 1.0"
