@@ -5,7 +5,10 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in ruby_spider.gemspec
 gemspec
 
-gem "rubocop-rails-omakase", "~> 1.1.0"
+group :development do
+    gem "rubocop-rails-omakase", "~> 1.1.0"
+end
+
 
 gem "rake", "~> 13.0"
 
