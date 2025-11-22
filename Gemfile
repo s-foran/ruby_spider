@@ -9,7 +9,6 @@ group :development do
     gem "rubocop-rails-omakase", "~> 1.1.0"
 end
 
-
 gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0"
