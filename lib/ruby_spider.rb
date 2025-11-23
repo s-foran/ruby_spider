@@ -3,6 +3,7 @@
 require_relative "ruby_spider/version"
 require_relative "ruby_spider/errors"
 require "ruby_spider/fetcher"
+require "ruby_spider/parser"
 
 module RubySpider
   class Error < StandardError; end
