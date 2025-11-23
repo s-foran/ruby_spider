@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "ruby_spider/version"
+require_relative "ruby_spider/errors"
 require "ruby_spider/fetcher"
 
 module RubySpider
