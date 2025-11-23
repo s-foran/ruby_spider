@@ -1,6 +1,6 @@
 require "nokogiri"
 
-module RubySpider 
+module RubySpider
   class Parser
     def initialize(html)
       @doc = Nokogiri::HTML(html)
