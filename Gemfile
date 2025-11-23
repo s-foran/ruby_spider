@@ -9,6 +9,10 @@ group :development do
     gem "rubocop-rails-omakase", "~> 1.1.0"
 end
 
+group :test do
+    gem "webmock", "~> 3.26.1"
+end
+
 gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0"
@@ -16,3 +20,5 @@ gem "rspec", "~> 3.0"
 gem "rubocop", "~> 1.21"
 
 gem "faraday", "~> 2.14.0"
+
+gem "nokogiri", "~> 1.18.10"
