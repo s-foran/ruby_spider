@@ -21,7 +21,25 @@ require "ruby_spider"
 
 # Example placeholder usage
 puts RubySpider::VERSION
-# => "0.0.0"
+# => "0.0.1"
+```
+
+### Fetch and parse raw HTML
+```ruby
+require "ruby_spider"
+
+# Fetch raw HTML from a URL
+html = RubySpider::Fetcher.fetch("https://example.com")
+
+# Extract specific text via CSS selector
+parser = RubySpider::Parser.new(html)
+title  = parser.text("h1")
+```
+
+### Scrape all-in-one
+```ruby
+require "ruby_spider"
+text = RubySpider::Scraper.scrape("https://example.com", "h1")
 ```
 
 ## Development
