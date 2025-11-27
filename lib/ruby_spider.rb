@@ -12,4 +12,10 @@ module RubySpider
   def self.scrape(url)
     response = Fetcher.fetch(url)
   end
+
+  def self.define(&block)
+    definition = Definition.new
+    definition.instance_eval(&block) if block_given?
+    definition
+  end
 end
