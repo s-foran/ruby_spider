@@ -7,6 +7,7 @@ require "ruby_spider/parser"
 require "ruby_spider/scraper"
 require "ruby_spider/field_definition"
 require "ruby_spider/list_definition"
+require "ruby_spider/scraper_runner"
 
 module RubySpider
   class Error < StandardError; end

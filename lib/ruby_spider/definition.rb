@@ -16,5 +16,9 @@ module RubySpider
       list_def.instance_eval(&block) if block_given?
       @lists << list_def
     end
+
+    def run
+      ScraperRunner.new(self).run
+    end
   end
 end
