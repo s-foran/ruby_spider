@@ -2,7 +2,7 @@ require "nokogiri"
 
 module RubySpider
   class ScraperRunner
-    def initalize(definition)
+    def initialize(definition)
       @definition = definition
     end
 
@@ -27,6 +27,27 @@ module RubySpider
         end
       end
       results
+    end
+
+
+    def fetch_all_pages(start_url)
+      pages = []
+      current_url = start_url
+
+      loop do
+        html = RubySpider::Fetcher.fetch(current_url)
+        pages << html
+
+        break unless @definition.pagination_selector
+
+        doc = Nokogiri::HTML(html)
+        next_link = doc.at_css(@definition.pagination_selector)&.[]("href")
+
+        break unless next_link
+
+        current = URI.join(current, next_link).to_s
+      end
+      pages
     end
   end
 end

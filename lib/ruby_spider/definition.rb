@@ -1,6 +1,6 @@
 module RubySpider
   class Definition
-    attr_accessor :start_urls, :lists
+    attr_accessor :start_urls, :lists, :pagination_selector
 
     def initialize
       @start_urls = []
@@ -19,6 +19,10 @@ module RubySpider
 
     def run
       ScraperRunner.new(self).run
+    end
+
+    def paginate(selector)
+      @pagination_selector = selector
     end
   end
 end
