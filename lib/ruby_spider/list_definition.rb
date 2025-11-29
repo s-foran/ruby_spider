@@ -7,7 +7,7 @@ module RubySpider
     end
 
     def field(name, selector, transform: nil)
-      @field << FieldDefintion.new(name, selector, transform: transform)
-
+      @field << FieldDefinition.new(name, selector, transform: transform)
+    end
   end
 end
